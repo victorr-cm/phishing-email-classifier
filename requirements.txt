@@ -1,0 +1,10 @@
+# Tested with Python 3.14 and the versions below.
+# Google Colab already ships compatible versions of these libraries.
+numpy>=2.0
+pandas>=2.2
+scipy>=1.11
+scikit-learn>=1.5
+matplotlib>=3.8
+
+# Only needed to run the notebook locally (not on Colab)
+jupyter

@@ -1,0 +1,12 @@
+# Dataset: download it from Kaggle (see README), never commit it
+data/
+
+# Python / Jupyter
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
