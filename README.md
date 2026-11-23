@@ -15,10 +15,10 @@ GitHub shows it **already executed**, so you can read every table and figure wit
 | B: Neural network (MLP, threshold 0.241) | 0.984 | 0.994 | 0.989 | 49 |
 
 - A and B are **not significantly different** (McNemar exact test, p = 0.29). B has 64× more parameters
-  and takes 13× longer to train.
+  and takes about 7× longer to train (laptop CPU; exact seconds vary between runs).
 - **Caveat:** the model partly learns the *style of each source corpus*. When a corpus is left out of
-  training, performance on it drops (e.g. recall on unseen Nazario phishing falls from 0.99 to 0.67).
-  See section 11 of the notebook.
+  training, performance on it drops (e.g. recall on unseen Nazario phishing falls from 0.99 to 0.59;
+  0.51–0.68 across variants of the corpus-matching step). See section 11 of the notebook.
 
 ## Quick path
 
