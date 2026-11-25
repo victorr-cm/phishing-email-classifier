@@ -41,6 +41,32 @@ pip install -r requirements.txt
 jupyter notebook phishing_classifier.ipynb
 ```
 
+## Live demo: classify a new email
+
+`demo.py` loads the saved final model (`models/model_a.joblib`, written by section 5.4 of the notebook)
+and classifies an email in about a second. It does **not** train anything and does **not** need the dataset.
+
+```bash
+python demo.py demo_emails/a_phishing.txt      # one email
+python demo.py demo_emails/                    # every .txt file in the folder
+```
+
+For each email it prints the email text, the probability of being malicious, the decision at the threshold chosen on
+validation (0.297), and the 3 terms that push the decision most towards each side (θⱼ · xⱼ):
+
+```
+ P(malicious) = 0.250     Decision: SAFE  (threshold 0.297)
+ Pushing towards MALICIOUS        Pushing towards SAFE
+   suspended            +1.37     university           -7.37
+```
+
+- `demo_emails/` contains four example emails: a classic phishing email, a legitimate email from a lecturer,
+  a phishing email imitating CityU IT Services, and the same email with "university" replaced by "bank".
+- Email files are plain text; a first line starting with `Subject:` is used as the subject.
+- New emails are pre-processed like the dataset (lower-case, punctuation deleted, NLTK English stop words removed).
+  This is our reconstruction of the dataset authors' pre-processing, checked against the data, not their exact code.
+- The saved model loads with scikit-learn 1.9.x (the version used to train it).
+
 ## Data
 
 Dataset: [Phishing Email Dataset](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset)
@@ -78,6 +104,9 @@ data/
 
 ```
 phishing_classifier.ipynb   the whole pipeline (executed, with outputs)
+demo.py                     classifies new emails with the saved model and explains the decision
+models/model_a.joblib       final logistic regression model (saved by notebook section 5.4)
+demo_emails/                example emails for the demo
 figures/                    report figures (PDF for LaTeX, PNG for viewing)
 results/                    result tables as CSV (test results, top weights, false negatives, per-corpus, LOCO)
 requirements.txt

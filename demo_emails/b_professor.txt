@@ -1,0 +1,9 @@
+Subject: Feedback on your Phase 1 proposal
+
+Hi Victor,
+Thanks for submitting your Phase 1 proposal. Overall it is clear and well scoped.
+For Phase 2, please make sure you report precision and recall on a held-out test
+set and discuss the limitations of your dataset. We can talk more after
+Thursday's lecture if you have any questions.
+Best regards,
+Course instructor

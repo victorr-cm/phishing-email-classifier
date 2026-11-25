@@ -1,0 +1,9 @@
+Subject: Action required: verify your account
+
+Dear user,
+We detected unusual sign-in activity on your account. To avoid any interruption
+of service, please verify your account within 24 hours by clicking the link below:
+http://secure-login-verify.com/account
+Failure to verify will result in the permanent suspension of your account.
+Thank you,
+Support Team
